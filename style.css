@@ -1,0 +1,73 @@
+body{
+  background: linear-gradient(rgb(225, 225, 117),rgb(180, 232, 149));
+}
+.mainC {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+  width: 30%;
+  border-radius: 12px;
+  margin: 15px;
+}
+input {
+  padding: 10px;
+  width: 60%;
+  margin: 15px;
+  border-radius: 10px;
+  border: none;
+  border: 1px solid grey;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+input:focus {
+  border-color: orange;
+  border: 2px solid red;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+}
+button {
+  margin: 15px;
+  padding: 10px;
+  width: 60%;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background:linear-gradient(red, orange);
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+
+}
+button:hover{
+  background:linear-gradient(yellow, orange);
+  color: black;
+}
+
+#productDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 35px;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 200px;
+}
+h1{
+  text-align: center;
+  color: rgb(13, 13, 67);
+  font-family: Arial, Helvetica, sans-serif;
+}

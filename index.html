@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Product Management</title>
+</head>
+<body>
+  <h1>Product Management</h1>
+
+  <div class="mainC">
+    <div class="container">
+      <h2>Add Product details</h2>
+      <label for="id">Enter ID:</label>
+      <input type="text" name="id" id="input1" placeholder="Enter product ID">
+      <label for="id">Enter Name:</label>
+      <input type="text" name="id" id="input2" placeholder="Enter product name">
+      <label for="id">Enter Price:</label>
+      <input type="text" name="id" id="input3" placeholder="Enter product price">
+      <label for="id">Enter Stock:</label>
+      <input type="text" name="id" id="input4" placeholder="Enter stock quantity">
+      <button type="button" id="addBtn" onclick="postdata(event)">Add Product</button>
+    </div>
+
+    <div class="container">
+      <h2>Update Product details</h2>
+      <label for="id">Enter ID:</label>
+      <input type="text" name="id" id="updateId" placeholder="Enter product ID">
+      <label for="name">Enter New Name:</label>
+      <input type="text" name="name" id="updateName" placeholder="Enter product name">
+      <label for="price">Enter New Price:</label>
+      <input type="text" name="price" id="updatePrice" placeholder="Enter product price">
+      <label for="stock">Enter New Stock:</label>
+      <input type="text" name="stock" id="updateStock" placeholder="Enter stock quantity">
+      <button type="button" id="updateBtn" onclick="updateProduct(event)">Update Product</button>
+    </div>
+
+    <div class="container">
+      <h2>Delete Product details</h2>
+      <label for="id">Enter ID:</label>
+      <input type="text" name="id" id="deleteId" placeholder="Enter product ID">
+      <button type="button" id="deleteBtn" onclick="deleteProduct(event)">Delete Product</button>
+    </div>
+  </div>
+
+  <div id="productDisplay"></div>
+
+ 
+
+  <script src="script.js"></script>
+</body>
+</html>
