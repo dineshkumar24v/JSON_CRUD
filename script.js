@@ -14,7 +14,7 @@ async function postdata(event) {
   }
 
   // Add product to the server
-  await fetch("http://localhost:3000/data", {
+  await fetch("https://json-server-hosting-818h.onrender.com/data", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -23,6 +23,12 @@ async function postdata(event) {
   });
 
   fetchProducts(); // Refresh product list after adding
+
+  // Clear the input fields after submission
+  document.getElementById('input1').value = '';
+  document.getElementById('input2').value = '';
+  document.getElementById('input3').value = '';
+  document.getElementById('input4').value = '';
 }
 
 async function updateProduct(event) {
@@ -41,7 +47,7 @@ async function updateProduct(event) {
   }
 
   // Send PUT request to update the product by ID
-  let data = await fetch(`http://localhost:3000/data/${updatedObj.id}`, {
+  let data = await fetch(`https://json-server-hosting-818h.onrender.com/data/${updatedObj.id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json"
@@ -55,6 +61,11 @@ async function updateProduct(event) {
   } else {
     alert("Failed to update product");
   }
+   // Clear the update input fields after submission
+   document.getElementById('updateId').value = '';
+   document.getElementById('updateName').value = '';
+   document.getElementById('updatePrice').value = '';
+   document.getElementById('updateStock').value = '';
 }
 
 async function deleteProduct(event) {
@@ -68,7 +79,7 @@ async function deleteProduct(event) {
   }
 
   // Send DELETE request to delete the product by ID
-  let data = await fetch(`http://localhost:3000/data/${productId}`, {
+  let data = await fetch(`https://json-server-hosting-818h.onrender.com/data/${productId}`, {
     method: "DELETE"
   });
 
@@ -78,10 +89,12 @@ async function deleteProduct(event) {
   } else {
     alert("Failed to delete product");
   }
+  // Clear the delete input field after submission
+  document.getElementById('deleteId').value = '';
 }
 
 async function fetchProducts() {
-  let data = await fetch("http://localhost:3000/data");
+  let data = await fetch("https://json-server-hosting-818h.onrender.com/data");
   let res = await data.json();
 
   let displayContainer = document.getElementById('productDisplay');
